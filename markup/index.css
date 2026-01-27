@@ -62,6 +62,44 @@ body {
 }
 .gallery img:hover { transform: scale(1.05); }
 
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+}
+
+/* Arrows */
+.carousel .prev, .carousel .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 50%;
+  user-select: none;
+  background: rgba(0,0,0,0.3);
+  transform: translateY(-50%);
+}
+
+.carousel .prev { left: 10px; }
+.carousel .next { right: 10px; }
+
+.carousel .prev:hover, .carousel .next:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+
 /* Surprise button */
 .surprise button {
   background: #ff6f91;

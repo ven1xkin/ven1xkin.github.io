@@ -1,31 +1,4 @@
-// 1️⃣ TIMED UNLOCK
-const locked = document.getElementById("locked");
-const unlocked = document.getElementById("unlocked");
-const countdown = document.getElementById("countdown");
 
-// Unlock date: Feb 14, 2026 00:00
-const unlockDate = new Date("January 28, 2026 01:14:00").getTime();
-
-function checkUnlock() {
-  const now = new Date().getTime();
-  const diff = unlockDate - now;
-
-  if (diff <= 0) {
-    // Unlock site
-    locked.classList.add("hidden");
-    unlocked.classList.remove("hidden");
-  } else {
-    // Show countdown
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s until your surprise!`;
-  }
-}
-setInterval(checkUnlock, 1000);
-checkUnlock();
 
 // 2️⃣ MUSIC PLAY/PAUSE
 const music = document.getElementById("bgMusic");
@@ -87,4 +60,5 @@ setInterval(() => {
 // Arrow buttons
 document.querySelector(".prev").onclick = () => showImage(currentIndex - 1);
 document.querySelector(".next").onclick = () => showImage(currentIndex + 1);
+
 

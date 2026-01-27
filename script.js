@@ -4,7 +4,7 @@ const unlocked = document.getElementById("unlocked");
 const countdown = document.getElementById("countdown");
 
 // Unlock date: Feb 14, 2026 00:00
-const unlockDate = new Date("February 14, 2026 00:00:00").getTime();
+const unlockDate = new Date("January 28, 2026 01:14:00").getTime();
 
 function checkUnlock() {
   const now = new Date().getTime();
@@ -87,3 +87,4 @@ setInterval(() => {
 // Arrow buttons
 document.querySelector(".prev").onclick = () => showImage(currentIndex - 1);
 document.querySelector(".next").onclick = () => showImage(currentIndex + 1);
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Babi 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOCKED MESSAGE -->
+<div id="locked">
+  <h1>💌 Secret Love Letter 💌</h1>
+  <p>Patience, Babi... your surprise will unlock on Feb 14!</p>
+  <p id="countdown"></p>
+</div>
+
+<!-- FULL SITE CONTENT -->
+<div id="unlocked" class="hidden">
+
+  <!-- Music -->
+  <audio id="bgMusic" loop>
+    <source src="music/love.mp3" type="audio/mpeg">
+  </audio>
+  <button id="musicBtn">🎶 Play Music</button>
+
+  <!-- Floating Hearts -->
+  <div class="hearts"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Happy Valentine’s Day & Birthday</h1>
+    <h2>My Babi 💕</h2>
+    <p>
+      To Cleoheart, the most beautiful soul in my life.  
+      Today is about love, you, and everything we are together.
+    </p>
+  </section>
+
+  <!-- COUNTDOWN TO NEXT YEAR (optional) -->
+  <section class="countdown">
+    <h2>Our Special Day 💖</h2>
+    <div id="timer"></div>
+  </section>
+
+  <!-- LOVE LETTER -->
+  <section class="letter">
+    <h2>My Love Letter 💌</h2>
+    <p>
+      Babi,  
+      From the moment you entered my life, everything became softer, warmer,
+      and more meaningful. You are my heart, my peace, my favorite thought
+      every single day.  
+      <br><br>
+      On your birthday and Valentine’s Day, I want you to know:
+      I choose you. Always.
+    </p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+  <h2>Our Memories 📸</h2>
+
+  <div class="carousel">
+    <button class="prev">&#10094;</button>
+    <img id="carouselImage" src="images/images(1).jfif" alt="Memory">
+    <button class="next">&#10095;</button>
+  </div>
+</section>
+
+  <!-- SURPRISE -->
+  <section class="surprise">
+    <h2>A Little Surprise 🎁</h2>
+    <button id="surpriseBtn">Open Your Gift 💖</button>
+    <p id="surpriseText" class="hidden">
+      Happy Birthday, my love 🎂  
+      You are my forever Valentine 🌹  
+      I love you more than words can ever say.
+    </p>
+  </section>
+
+  <footer>
+    Made with ❤️ just for you, Babi.
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

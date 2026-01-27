@@ -10,23 +10,7 @@ musicBtn.onclick = () => {
   playing = !playing;
 };
 
-// 3️⃣ COUNTDOWN TIMER (optional inside site)
-const timer = document.getElementById("timer");
-const nextYear = new Date("February 14, 2027 00:00:00").getTime();
-setInterval(() => {
-  if (!timer) return;
-  const now = new Date().getTime();
-  const diff = nextYear - now;
-  const days = Math.floor(diff / (1000*60*60*24));
-  const hours = Math.floor((diff / (1000*60*60)) % 24);
-  const mins = Math.floor((diff / (1000*60)) % 60);
-  timer.textContent = `${days}d ${hours}h ${mins}m`;
-}, 1000);
 
-// 4️⃣ SURPRISE BUTTON
-document.getElementById("surpriseBtn").onclick = () => {
-  document.getElementById("surpriseText").classList.remove("hidden");
-};
 
 // 5️⃣ PHOTO CAROUSEL
 const images = [
@@ -38,7 +22,8 @@ const images = [
   "images/images(6).jfif",
   "images/images(7).jfif",
   "images/images(8).jfif",
-  "images/images(9).jfif"
+  "images/images(9).jfif",
+  "images/images(10).jfif"
 ];
 
 let currentIndex = 0;
@@ -60,5 +45,6 @@ setInterval(() => {
 // Arrow buttons
 document.querySelector(".prev").onclick = () => showImage(currentIndex - 1);
 document.querySelector(".next").onclick = () => showImage(currentIndex + 1);
+
 
 

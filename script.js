@@ -45,7 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // Auto slide
   setInterval(() => {
     showImage(currentIndex + 1);
-  }, 3000);
+  }, 10000);
 
   // Buttons (only if they exist)
   if (prevBtn) {
@@ -62,6 +62,7 @@ window.addEventListener("DOMContentLoaded", () => {
 // Arrow buttons
 document.querySelector(".prev").onclick = () => showImage(currentIndex - 1);
 document.querySelector(".next").onclick = () => showImage(currentIndex + 1);
+
 
 
 

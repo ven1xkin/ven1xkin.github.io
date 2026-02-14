@@ -27,24 +27,42 @@ const images = [
 ];
 
 let currentIndex = 0;
-const carouselImage = document.getElementById("carouselImage");
 
-function showImage(index) {
-  if (index < 0) currentIndex = images.length - 1;
-  else if (index >= images.length) currentIndex = 0;
-  else currentIndex = index;
+window.addEventListener("DOMContentLoaded", () => {
 
-  carouselImage.src = images[currentIndex];
-}
+  const carouselImage = document.getElementById("carouselImage");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
 
-// Auto-slide every 3 seconds
-setInterval(() => {
-  showImage(currentIndex + 1);
-}, 3000);
+  function showImage(index) {
+    if (index < 0) currentIndex = images.length - 1;
+    else if (index >= images.length) currentIndex = 0;
+    else currentIndex = index;
+
+    carouselImage.src = images[currentIndex];
+  }
+
+  // Auto slide
+  setInterval(() => {
+    showImage(currentIndex + 1);
+  }, 3000);
+
+  // Buttons (only if they exist)
+  if (prevBtn) {
+    prevBtn.onclick = () => showImage(currentIndex - 1);
+  }
+
+  if (nextBtn) {
+    nextBtn.onclick = () => showImage(currentIndex + 1);
+  }
+
+});
+
 
 // Arrow buttons
 document.querySelector(".prev").onclick = () => showImage(currentIndex - 1);
 document.querySelector(".next").onclick = () => showImage(currentIndex + 1);
+
 
 
 

@@ -14,16 +14,16 @@ musicBtn.onclick = () => {
 
 // 5️⃣ PHOTO CAROUSEL
 const images = [
-  "images/images(1).jfif",
-  "images/images(2).jfif",
-  "images/images(3).jfif",
-  "images/images(4).jfif",
-  "images/images(5).jfif",
-  "images/images(6).jfif",
-  "images/images(7).jfif",
-  "images/images(8).jfif",
-  "images/images(9).jfif",
-  "images/images(10).jfif"
+  "images/image (1).jfif",
+  "images/image (2).jfif",
+  "images/image (3).jfif",
+  "images/image (4).jfif",
+  "images/image (5).jfif",
+  "images/image (6).jfif",
+  "images/image (7).jfif",
+  "images/image (8).jfif",
+  "images/image (9).jfif",
+  "images/image (10).jfif"
 ];
 
 let currentIndex = 0;
@@ -45,6 +45,7 @@ setInterval(() => {
 // Arrow buttons
 document.querySelector(".prev").onclick = () => showImage(currentIndex - 1);
 document.querySelector(".next").onclick = () => showImage(currentIndex + 1);
+
 
 
 
